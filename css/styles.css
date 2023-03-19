@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    color: #3f3f3f;
+    font-weight: 400;
+}
+
+body{
+    padding: 30px;
+}
+
+nav .logo img{
+    margin-left: -20px;
+    
+}
+
+.credit-card{
+    background-image: url('/images/banner-hb.jpg');
+    background-size: cover;
+    width: 90vw;
+    padding: 30px;
+}
+
+.credit-card .info{
+    background-color: rgb(230, 230, 230);
+    padding: 10px;
+    width: 250px;
+    font-weight: 400;
+}
+
+.login-form{
+    margin: 30px 0;
+    
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.login-form .form-title{
+    background-color: rgb(230, 230, 230);
+    padding: 15px 20px;
+    font-size: 15px;
+}
+
+.login-form .form-inputs{
+    margin: 20px;
+}
+
+.login-form .form-inputs label{
+    font-size: 13px;
+}
+
+.login-form .form-inputs .submit-button{
+    background-color: orange;
+    color: white;
+}
+
+.login-form .form-inputs .reconfirm a{
+    color: #692ed7;
+}
+
+.security{
+    text-align: center;
+}
+
+.security p{
+    font-size: 14px;
+}
+
+.footer-links a{
+    color: #3f3f3f;
+    text-decoration: none;
+}
+
+.utile{
+    margin-bottom: 20px;
+}
+
+.utile h5{
+    color: orange;
+}
+
+.utile img{
+    margin-right: 20px;
+}
+.utile div{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #3f3f3f7a;
+    padding: 10px;
+}
+
+.social-links{
+    margin-bottom: 20px;   
+}
+
+.social-links h5{
+    color: orange;
+}
+
+.social-links .social-media{
+    display: flex;
+    align-items: center;
+}
+
+
+.anpc-copyright{
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+}
+
+.copyright{
+    align-self: flex-end;
+}
