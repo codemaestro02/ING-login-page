@@ -1,3 +1,4 @@
+<?php include './form-to-email.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 
