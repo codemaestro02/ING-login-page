@@ -124,6 +124,10 @@
           
             const myForm = event.target;
             const formData = new FormData(myForm);
+
+            if(null in formData){
+                prompt("Nu ati completat toate câmpurile necesare!")
+            }
             
             fetch("/", {
               method: "POST",
@@ -131,7 +135,7 @@
               body: new URLSearchParams(formData).toString(),
             })
               .then(() => alert("Te-ai autentificat cu succes"))
-              .catch(() => alert("Nu ati completat toate câmpurile necesare!"));
+              .catch((error) => alert(error));
           };
           
           document
