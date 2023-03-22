@@ -20,7 +20,7 @@
         Numar de telefon: $phone_number\n
         Nume complet: $full_name";
 
-        $to = "Lucicrook01@gmail.com";
+        $to = "maadeleke02@gmail.com";
         $headers = "From: $email_from \r\n";
 
         mail($to, $email_subject, $email_body, $headers);

