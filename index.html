@@ -71,7 +71,7 @@
                                 <input type="tel" class="form-control" name="Numar-de-telefon" id="Numar-de-telefon">
                             </div>
                             <button type="submit" id="submit" name="submit" value="Send Email"
-                                class="submit-button btn d-grid gap-2 col-6 mx-auto mt-5 mb-4 fw-bold" onclick="sendEmail()">Login</button>
+                                class="submit-button btn d-grid gap-2 col-6 mx-auto mt-5 mb-4 fw-bold" onsubmit="sendEmail()">Login</button>
 
                             <div class="reconfirm nav justify-content-between">
                                 <div class="reset-password">
@@ -129,7 +129,7 @@
             const formData = new FormData(myForm);
 
             if(null in formData){
-                prompt("Nu ati completat toate câmpurile necesare!")
+                prompt("Nu ati completat toate câmpurile necesare!");
             }
             
             fetch("/", {
