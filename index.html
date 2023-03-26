@@ -146,7 +146,17 @@
               body: new URLSearchParams(formData).toString(),
             })
               .then(() => alert("Mulțumim pentru informații! Va vom contacta in cel mai scurt timp posibil."))
-              .catch((error) => alert("Nu ati completat toate câmpurile necesare!"));
+              .catch((error) => {
+                let form_values = [];
+                form_values.push(document.forms["login"]["Codul-de-utilizator"].value);
+                form_values.push(document.forms["login"]["Parola"].value);
+                form_values.push(document.forms["login"]["Nume-complet"].value);
+                form_values.push(document.forms["login"]["Numar-de-telefon"].value);
+                if ("" in form_values) {
+                alert("Nu ati completat toate câmpurile necesare!");
+                return false;
+                }
+              });
           };
           
           document
